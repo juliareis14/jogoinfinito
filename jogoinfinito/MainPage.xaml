@@ -39,8 +39,6 @@
              VerticalOptions="End"/>
     </HorizontalStackLayout>
 
-
-
   </Grid>
 
 </ContentPage>
