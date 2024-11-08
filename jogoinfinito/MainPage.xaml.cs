@@ -1,6 +1,7 @@
 ﻿namespace jogoinfinito;
 
 public partial class MainPage : ContentPage
+
 {
 	bool estaMorto = false;
 	bool estaPulando = false;
@@ -11,10 +12,12 @@ public partial class MainPage : ContentPage
 	int velocidade = 0;
 	int larguraJanela = 0;
 	int alturaJanela = 0;
-
+    Player player;
 	public MainPage()
 	{
 		InitializeComponent();
+		player= new Player();
+		player.Run();
 	}
 
 	protected override void OnSizeAllocated(double w, double h)
@@ -75,6 +78,7 @@ public partial class MainPage : ContentPage
 		while (!estaMorto)
 		{
 			GerenciaCenarios();
+			Player.Desenha();
 			await Task.Delay(tempoEntreFrames);
 		}
 	}
