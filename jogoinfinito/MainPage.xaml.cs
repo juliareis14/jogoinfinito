@@ -16,7 +16,7 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		player= new Player();
+		player= new Player(imgplayer);
 		player.Run();
 	}
 
@@ -78,7 +78,7 @@ public partial class MainPage : ContentPage
 		while (!estaMorto)
 		{
 			GerenciaCenarios();
-			Player.Desenha();
+			player.Desenha();
 			await Task.Delay(tempoEntreFrames);
 		}
 	}

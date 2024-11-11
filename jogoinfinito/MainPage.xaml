@@ -4,6 +4,12 @@
              x:Class="jogoinfinito.MainPage">
 
   <Grid>
+
+   <Image Source="andar01"
+                     x:Name="imgplayer"
+                     HorizontalOptions="Start"
+                     VerticalOptions="End"/>
+
     <HorizontalStackLayout x:Name="HSLayer1">
       <Image Source="fundo2.jpg"
              Aspect="Fill"/>

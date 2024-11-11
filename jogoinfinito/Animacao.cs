@@ -2,11 +2,11 @@ namespace jogoinfinito;
 
 public class Animacao
 {
-    protected List<String> Animacao1 = new List<String>();
-    protected List<String> Animacao2 = new List<String>();
-    protected List<String> Animacao3 = new List<String>();
-    protected List<String> Animacao4 = new List<String>();
-    protected List<String> Animacao5 = new List<String>();
+    protected List<String> Animacao01 = new List<String>();
+    protected List<String> Animacao02 = new List<String>();
+    protected List<String> Animacao03 = new List<String>();
+    protected List<String> Animacao04 = new List<String>();
+    protected List<String> Animacao05 = new List<String>();
 
     protected bool loop = true;
     protected int AnimacaoAtiva = 1;
@@ -33,22 +33,22 @@ public class Animacao
     {
         if (parado)
             return;
-        string NomeArquivo = "";
+        string NomeArquivo = "porco";
         int TamanhoAnimacao = 0;
         if (AnimacaoAtiva == 1)
         {
-            NomeArquivo = Animacao1[frameAtual];
-            TamanhoAnimacao = Animacao1.Count;
+            NomeArquivo = Animacao01[frameAtual];
+            TamanhoAnimacao = Animacao01.Count;
         }
         else if (AnimacaoAtiva == 2)
         {
-            NomeArquivo = Animacao2[frameAtual];
-            TamanhoAnimacao = Animacao2.Count;
+            NomeArquivo = Animacao02[frameAtual];
+            TamanhoAnimacao = Animacao02.Count;
         }
         else if (AnimacaoAtiva == 3)
         {
-            NomeArquivo = Animacao3[frameAtual];
-            TamanhoAnimacao = Animacao3.Count;
+            NomeArquivo = Animacao03[frameAtual];
+            TamanhoAnimacao = Animacao03.Count;
         }
         compImage.Source = ImageSource.FromFile(NomeArquivo);
         frameAtual++;
