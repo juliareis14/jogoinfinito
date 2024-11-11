@@ -3,48 +3,55 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jogoinfinito.MainPage">
 
-  <Grid>
 
-   <Image Source="andar01"
+       <Grid>
+
+
+              <HorizontalStackLayout x:Name="HSLayer1">
+                     <Image Source="fundo2.jpg"
+                            Aspect="Fill"/>
+                     <Image Source="fundo2.jpg"
+                            Aspect="Fill"/>
+                     <Image Source="fundo2.jpg"
+                            Aspect="Fill"/>
+              </HorizontalStackLayout>
+
+
+              <HorizontalStackLayout x:Name="HSLayer2">
+                     <Image Source="fundo4.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"/>
+                     <Image Source="fundo4.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"/>
+                     <Image Source="fundo4.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"/>
+              </HorizontalStackLayout>
+
+
+              <HorizontalStackLayout x:Name="HSLayer3">
+                     <Image Source="chao.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"/>
+                     <Image Source="chao.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"/>
+                     <Image Source="chao.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"/>
+              </HorizontalStackLayout>
+
+
+              <Image Source="andar01.png"
                      x:Name="imgplayer"
                      HorizontalOptions="Start"
-                     VerticalOptions="End"/>
-
-    <HorizontalStackLayout x:Name="HSLayer1">
-      <Image Source="fundo2.jpg"
-             Aspect="Fill"/>
-      <Image Source="fundo2.jpg"
-             Aspect="Fill"/>
-      <Image Source="fundo2.jpg"
-             Aspect="Fill"/>
-    </HorizontalStackLayout>
+                     VerticalOptions="End"
+                     HeightRequest="100"
+                     WidthRequest="300"
+                     Margin="0,0,0,50"/>
 
 
-    <HorizontalStackLayout x:Name="HSLayer2">
-      <Image Source="fundo4.png"
-             HorizontalOptions="End"
-             VerticalOptions="End"/>
-      <Image Source="fundo4.png"
-             HorizontalOptions="End"
-             VerticalOptions="End"/>
-      <Image Source="fundo4.png"
-             HorizontalOptions="End"
-             VerticalOptions="End"/>
-    </HorizontalStackLayout>
-
-
-    <HorizontalStackLayout x:Name="HSLayer3">
-      <Image Source="chao.png"
-             HorizontalOptions="End"
-             VerticalOptions="End"/>
-      <Image Source="chao.png"
-             HorizontalOptions="End"
-             VerticalOptions="End"/>
-      <Image Source="chao.png"
-             HorizontalOptions="End"
-             VerticalOptions="End"/>
-    </HorizontalStackLayout>
-
-  </Grid>
+       </Grid>
 
 </ContentPage>

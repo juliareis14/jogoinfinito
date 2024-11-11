@@ -5,8 +5,6 @@ public class Animacao
     protected List<String> Animacao01 = new List<String>();
     protected List<String> Animacao02 = new List<String>();
     protected List<String> Animacao03 = new List<String>();
-    protected List<String> Animacao04 = new List<String>();
-    protected List<String> Animacao05 = new List<String>();
 
     protected bool loop = true;
     protected int AnimacaoAtiva = 1;
@@ -33,7 +31,7 @@ public class Animacao
     {
         if (parado)
             return;
-        string NomeArquivo = "porco";
+        string NomeArquivo = "";
         int TamanhoAnimacao = 0;
         if (AnimacaoAtiva == 1)
         {

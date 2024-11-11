@@ -12,11 +12,11 @@ public partial class MainPage : ContentPage
 	int velocidade = 0;
 	int larguraJanela = 0;
 	int alturaJanela = 0;
-    Player player;
+	Player player;
 	public MainPage()
 	{
 		InitializeComponent();
-		player= new Player(imgplayer);
+		player = new Player(imgplayer);
 		player.Run();
 	}
 
@@ -88,5 +88,6 @@ public partial class MainPage : ContentPage
 		base.OnAppearing();
 		Desenha();
 	}
+	
 }
 
