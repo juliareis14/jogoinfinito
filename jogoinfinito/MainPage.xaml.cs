@@ -1,4 +1,6 @@
-﻿namespace jogoinfinito;
+﻿
+
+namespace jogoinfinito;
 
 public partial class MainPage : ContentPage
 
@@ -12,6 +14,14 @@ public partial class MainPage : ContentPage
 	int velocidade = 0;
 	int larguraJanela = 0;
 	int alturaJanela = 0;
+	const int forcaGravidade = 10;
+	bool estanoChao = true;
+	bool estanoAr = false;
+	int tempoPulando = 0;
+	int temponoAr = 0;
+	const int forcaPulo = 10;
+	const int maxTempoPulando = 10;
+	const int maxTemponoAr = 5;
 	Player player;
 	public MainPage()
 	{
@@ -78,7 +88,15 @@ public partial class MainPage : ContentPage
 		while (!estaMorto)
 		{
 			GerenciaCenarios();
-			player.Desenha();
+			if (!estaPulando && !estanoAr)
+
+			{
+				AplicaGravidade();
+				player.Desenha();
+			}
+
+			else
+				AplicaPulo();
 			await Task.Delay(tempoEntreFrames);
 		}
 	}
@@ -88,6 +106,50 @@ public partial class MainPage : ContentPage
 		base.OnAppearing();
 		Desenha();
 	}
-	
+
+
+	void AplicaGravidade()
+	{
+		if (player.GetY() < 0)
+			player.MoveY(forcaGravidade);
+		else if (player.GetY() >= 0)
+		{
+			player.SetY(0);
+			estanoChao = true;
+		}
+	}
+	void AplicaPulo()
+	{
+		estanoChao = false;
+		if (estaPulando && tempoPulando >= maxTempoPulando)
+		{
+			estaPulando = false;
+			estanoAr = true;
+			temponoAr = 0;
+		}
+		else if (estanoAr && temponoAr >= maxTemponoAr)
+		{
+			estaPulando = false;
+			estanoAr = false;
+			tempoPulando = 0;
+			temponoAr = 0;
+		}
+		else if (estaPulando && tempoPulando < maxTempoPulando)
+		{
+			player.MoveY(-forcaPulo);
+			tempoPulando++;
+		}
+		else if (estanoAr)
+			temponoAr++;
+	}
+
+
+	void OnGridClicked(object o, TappedEventArgs a)
+	{
+		if (estanoChao)
+			estaPulando = true;
+	}
+
 }
+
 

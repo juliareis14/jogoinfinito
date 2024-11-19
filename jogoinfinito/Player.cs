@@ -1,4 +1,5 @@
 using jogoinfinito;
+
 public delegate void Callback();
 public class Player : Animacao
 {
@@ -18,4 +19,17 @@ public class Player : Animacao
         Play();
 
     }
+
+      public void MoveY (int s)
+	{
+		compImage.TranslationY += s;	
+	}
+	public double GetY ()
+	{
+		return compImage.TranslationY;
+	}
+	public void SetY (double a)
+	{
+		compImage.TranslationY = a;
+	}
 }

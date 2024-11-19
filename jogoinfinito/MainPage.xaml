@@ -6,6 +6,11 @@
 
        <Grid>
 
+              <Grid.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="OnGridClicked"/>
+              </Grid.GestureRecognizers>
+
+
 
               <HorizontalStackLayout x:Name="HSLayer1">
                      <Image Source="fundo2.jpg"
@@ -50,6 +55,8 @@
                      HeightRequest="100"
                      WidthRequest="300"
                      Margin="0,0,0,50"/>
+
+                        
 
 
        </Grid>
