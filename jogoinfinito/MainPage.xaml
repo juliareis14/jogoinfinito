@@ -56,7 +56,20 @@
                      WidthRequest="300"
                      Margin="0,0,0,50"/>
 
-                        
+                     <Image Source="fruta.png"
+                     x:Name="imgEnemy1"
+                     HeightRequest="100"
+                     WidthRequest="150"
+                     HorizontalOptions="End"
+                     VerticalOptions="End"
+                     Margin="0,0,0,20"/>     
+
+                      <Image Source="toco.png"
+                     x:Name="imgEnemy2"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     HorizontalOptions="Center"
+                     VerticalOptions="End"/>
 
 
        </Grid>
